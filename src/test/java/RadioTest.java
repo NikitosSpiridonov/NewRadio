@@ -45,8 +45,8 @@ public class RadioTest {
 
     @Test
     public void shouldtSetNextRadiostationIfNinth() {
-        Radio radio = new Radio();
-        radio.setCurrentRadiation(9);
+        Radio radio = new Radio(20);
+        radio.setCurrentRadiation(19);
         radio.next();
         int expected = 0;
         int actual = radio.getcurrentRadiation();

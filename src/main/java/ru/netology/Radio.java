@@ -3,10 +3,11 @@ package ru.netology;
 public class Radio {
     private int currentRadiation;
     private int currentVolume;
-    private int limitOfRadiostation;
-public Radio() {
-this.limitOfRadiostation = 10;
-}
+    private final int limitOfRadiostation;
+
+    public Radio() {
+        this.limitOfRadiostation = 10;
+    }
 
     public Radio(int limitOfRadiostation) {
         this.limitOfRadiostation = limitOfRadiostation;
@@ -17,7 +18,7 @@ this.limitOfRadiostation = 10;
     }
 
     public void setCurrentRadiation(int newCurrentRadiostation) {
-        if (newCurrentRadiostation <= limitOfRadiostation-1) {
+        if (newCurrentRadiostation <= limitOfRadiostation - 1) {
             if (newCurrentRadiostation >= 0) {
                 this.currentRadiation = newCurrentRadiostation;
             }
@@ -25,7 +26,7 @@ this.limitOfRadiostation = 10;
     }
 
     public void next() {
-        if (currentRadiation == limitOfRadiostation-1) {
+        if (currentRadiation == limitOfRadiostation - 1) {
             currentRadiation = 0;
         } else {
             currentRadiation++;
@@ -34,7 +35,7 @@ this.limitOfRadiostation = 10;
 
     public void prev() {
         if (currentRadiation == 0) {
-            currentRadiation = limitOfRadiostation-1;
+            currentRadiation = limitOfRadiostation - 1;
         } else {
             currentRadiation--;
         }
